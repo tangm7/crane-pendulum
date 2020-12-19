@@ -1,0 +1,541 @@
+A11_latex = latex(A11)
+A12_latex = latex(A12)
+A13_latex = latex(A13)
+A14_latex = latex(A14)
+A15_latex = latex(A15)
+A16_latex = latex(A16)
+
+A21_latex = latex(A21)
+A22_latex = latex(A22)
+A23_latex = latex(A23)
+A24_latex = latex(A24)
+A25_latex = latex(A25)
+A26_latex = latex(A26)
+
+A31_latex = latex(A31)
+A32_latex = latex(A32)
+A33_latex = latex(A33)
+A34_latex = latex(A34)
+A35_latex = latex(A35)
+A36_latex = latex(A36)
+
+A41_latex = latex(A41)
+A42_latex = latex(A42)
+A43_latex = latex(A43)
+A44_latex = latex(A44)
+A45_latex = latex(A45)
+A46_latex = latex(A46)
+
+A51_latex = latex(A51)
+A52_latex = latex(A52)
+A53_latex = latex(A53)
+A54_latex = latex(A54)
+A55_latex = latex(A55)
+A56_latex = latex(A56)
+
+A61_latex = latex(A61)
+A62_latex = latex(A62)
+A63_latex = latex(A63)
+A64_latex = latex(A64)
+A65_latex = latex(A65)
+A66_latex = latex(A66)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$A11 =
+0$\\\\\\
+
+
+$A12 =
+1$\\\\\\
+
+
+$A13 =
+0$\\\\\\
+
+
+$A14 =
+0$\\\\\\
+
+
+$A15 =
+0$\\\\\\
+
+
+$A16 =
+0$\\\\\\
+
+
+$A21 =
+0$\\\\\\
+
+
+$A22 =
+0$\\\\\\
+
+
+$A23 =
+\left(-\frac{m_{1}\,\left(M\,l_{1}\,\cos\left(q_{1}\left(t\right)\right)-l_{1}\,m_{1}\,\cos\left(q_{1}\left(t\right)\right)+l_{1}\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)+l_{1}\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^3-l_{1}\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,{\cos\left(q_{2}\left(t\right)\right)}^2\right)}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\right)\,{\left(\frac{\partial }{\partial t} q_{1}\left(t\right)\right)}^2+\frac{l_{2}\,m_{1}\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\,2}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\,{\left(\frac{\partial }{\partial t} q_{2}\left(t\right)\right)}^2+\frac{m_{1}\,\left(M\,g+g\,m_{1}+g\,m_{2}-F\,\sin\left(2\,q_{1}\left(t\right)\right)-2\,M\,g\,{\cos\left(q_{1}\left(t\right)\right)}^2-g\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-2\,g\,m_{2}\,{\cos\left(q_{1}\left(t\right)\right)}^2-g\,m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+2\,g\,m_{2}\,{\cos\left(q_{1}\left(t\right)\right)}^2\,{\cos\left(q_{2}\left(t\right)\right)}^2+2\,g\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,\cos\left(q_{2}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\right)}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}$\\\\\\
+
+
+$A24 =
+\left(-\frac{l_{1}\,m_{1}\,\sin\left(q_{1}\left(t\right)\right)\,2}{m_{1}\,{\sin\left(q_{1}\left(t\right)\right)}^2+m_{2}\,{\sin\left(q_{2}\left(t\right)\right)}^2+M}\right)\,\frac{\partial }{\partial t} q_{1}\left(t\right)$\\\\\\
+
+
+$A25 =
+\frac{l_{1}\,m_{1}\,m_{2}\,\cos\left(q_{2}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\,2}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\,{\left(\frac{\partial }{\partial t} q_{1}\left(t\right)\right)}^2+\left(-\frac{m_{2}\,\left(M\,l_{2}\,\cos\left(q_{2}\left(t\right)\right)+l_{2}\,m_{1}\,\cos\left(q_{2}\left(t\right)\right)-l_{2}\,m_{2}\,\cos\left(q_{2}\left(t\right)\right)+l_{2}\,m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^3-l_{2}\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2\,\cos\left(q_{2}\left(t\right)\right)\right)}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\right)\,{\left(\frac{\partial }{\partial t} q_{2}\left(t\right)\right)}^2+\frac{m_{2}\,\left(M\,g+g\,m_{1}+g\,m_{2}-F\,\sin\left(2\,q_{2}\left(t\right)\right)-2\,M\,g\,{\cos\left(q_{2}\left(t\right)\right)}^2-g\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-2\,g\,m_{1}\,{\cos\left(q_{2}\left(t\right)\right)}^2-g\,m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+2\,g\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2\,{\cos\left(q_{2}\left(t\right)\right)}^2+2\,g\,m_{1}\,\cos\left(q_{1}\left(t\right)\right)\,\cos\left(q_{2}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\right)}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}$\\\\\\
+
+
+$A26 =
+\left(-\frac{l_{2}\,m_{2}\,\sin\left(q_{2}\left(t\right)\right)\,2}{m_{1}\,{\sin\left(q_{1}\left(t\right)\right)}^2+m_{2}\,{\sin\left(q_{2}\left(t\right)\right)}^2+M}\right)\,\frac{\partial }{\partial t} q_{2}\left(t\right)$\\\\\\
+
+
+$A31 =
+0$\\\\\\
+
+
+$A32 =
+0$\\\\\\
+
+
+$A33 =
+0$\\\\\\
+
+
+$A34 =
+1$\\\\\\
+
+
+$A35 =
+0$\\\\\\
+
+
+$A36 =
+0$\\\\\\
+
+
+$A41 =
+0$\\\\\\
+
+
+$A42 =
+0$\\\\\\
+
+
+$A43 =
+\left(-\frac{m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2}{-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}}+\frac{m_{1}\,{\sin\left(q_{1}\left(t\right)\right)}^2}{m_{1}\,{\sin\left(q_{1}\left(t\right)\right)}^2+m_{2}\,{\sin\left(q_{2}\left(t\right)\right)}^2+M}+\frac{{m_{1}}^2\,{\cos\left(q_{1}\left(t\right)\right)}^2\,{\sin\left(q_{1}\left(t\right)\right)}^2\,2}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\right)\,{\left(\frac{\partial }{\partial t} q_{1}\left(t\right)\right)}^2+\left(\frac{l_{2}\,m_{2}\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)}{l_{1}\,\left(m_{1}\,{\sin\left(q_{1}\left(t\right)\right)}^2+m_{2}\,{\sin\left(q_{2}\left(t\right)\right)}^2+M\right)}+\frac{l_{2}\,m_{1}\,m_{2}\,{\cos\left(q_{1}\left(t\right)\right)}^2\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\,2}{l_{1}\,{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\right)\,{\left(\frac{\partial }{\partial t} q_{2}\left(t\right)\right)}^2-\frac{2\,M\,g\,\cos\left(q_{1}\left(t\right)\right)-g\,m_{2}\,\cos\left(q_{1}\left(t\right)-2\,q_{2}\left(t\right)\right)+2\,g\,m_{1}\,\cos\left(q_{1}\left(t\right)\right)+g\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)}{l_{1}\,\left(2\,M+m_{1}+m_{2}-m_{1}\,\cos\left(2\,q_{1}\left(t\right)\right)-m_{2}\,\cos\left(2\,q_{2}\left(t\right)\right)\right)}-\frac{F\,\sin\left(q_{1}\left(t\right)\right)}{l_{1}\,\left(m_{1}\,{\sin\left(q_{1}\left(t\right)\right)}^2+m_{2}\,{\sin\left(q_{2}\left(t\right)\right)}^2+M\right)}+\frac{m_{1}\,\sin\left(2\,q_{1}\left(t\right)\right)\,\left(M\,g\,\sin\left(q_{1}\left(t\right)\right)-\frac{g\,m_{2}\,\sin\left(q_{1}\left(t\right)-2\,q_{2}\left(t\right)\right)}{2}+g\,m_{1}\,\sin\left(q_{1}\left(t\right)\right)+\frac{g\,m_{2}\,\sin\left(q_{1}\left(t\right)\right)}{2}\right)\,4}{l_{1}\,{\left(2\,M+m_{1}+m_{2}-m_{1}\,\cos\left(2\,q_{1}\left(t\right)\right)-m_{2}\,\cos\left(2\,q_{2}\left(t\right)\right)\right)}^2}-\frac{F\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2\,\sin\left(q_{1}\left(t\right)\right)\,2}{l_{1}\,{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}$\\\\\\
+
+
+$A44 =
+\left(-\frac{m_{1}\,\cos\left(q_{1}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,2}{-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}}\right)\,\frac{\partial }{\partial t} q_{1}\left(t\right)$\\\\\\
+
+
+$A45 =
+\frac{m_{1}\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,\cos\left(q_{2}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\,2}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\,{\left(\frac{\partial }{\partial t} q_{1}\left(t\right)\right)}^2+\left(-\frac{m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,\left(M\,l_{2}\,\cos\left(q_{2}\left(t\right)\right)+l_{2}\,m_{1}\,\cos\left(q_{2}\left(t\right)\right)-l_{2}\,m_{2}\,\cos\left(q_{2}\left(t\right)\right)+l_{2}\,m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^3-l_{2}\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2\,\cos\left(q_{2}\left(t\right)\right)\right)}{l_{1}\,{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\right)\,{\left(\frac{\partial }{\partial t} q_{2}\left(t\right)\right)}^2+\frac{m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,\left(M\,g+g\,m_{1}+g\,m_{2}-F\,\sin\left(2\,q_{2}\left(t\right)\right)-2\,M\,g\,{\cos\left(q_{2}\left(t\right)\right)}^2-g\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-2\,g\,m_{1}\,{\cos\left(q_{2}\left(t\right)\right)}^2-g\,m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+2\,g\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2\,{\cos\left(q_{2}\left(t\right)\right)}^2+2\,g\,m_{1}\,\cos\left(q_{1}\left(t\right)\right)\,\cos\left(q_{2}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\right)}{l_{1}\,{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}$\\\\\\
+
+
+$A46 =
+\left(-\frac{l_{2}\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\,2}{l_{1}\,\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}\right)\,\frac{\partial }{\partial t} q_{2}\left(t\right)$\\\\\\
+
+
+$A51 =
+0$\\\\\\
+
+
+$A52 =
+0$\\\\\\
+
+
+$A53 =
+0$\\\\\\
+
+
+$A54 =
+0$\\\\\\
+
+
+$A55 =
+0$\\\\\\
+
+
+$A56 =
+1$\\\\\\
+
+
+$A61 =
+0$\\\\\\
+
+
+$A62 =
+0$\\\\\\
+
+
+$A63 =
+\left(-\frac{m_{1}\,\cos\left(q_{2}\left(t\right)\right)\,\left(M\,l_{1}\,\cos\left(q_{1}\left(t\right)\right)-l_{1}\,m_{1}\,\cos\left(q_{1}\left(t\right)\right)+l_{1}\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)+l_{1}\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^3-l_{1}\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,{\cos\left(q_{2}\left(t\right)\right)}^2\right)}{l_{2}\,{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\right)\,{\left(\frac{\partial }{\partial t} q_{1}\left(t\right)\right)}^2+\frac{m_{1}\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,\cos\left(q_{2}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\,2}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\,{\left(\frac{\partial }{\partial t} q_{2}\left(t\right)\right)}^2+\frac{m_{1}\,\cos\left(q_{2}\left(t\right)\right)\,\left(M\,g+g\,m_{1}+g\,m_{2}-F\,\sin\left(2\,q_{1}\left(t\right)\right)-2\,M\,g\,{\cos\left(q_{1}\left(t\right)\right)}^2-g\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-2\,g\,m_{2}\,{\cos\left(q_{1}\left(t\right)\right)}^2-g\,m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+2\,g\,m_{2}\,{\cos\left(q_{1}\left(t\right)\right)}^2\,{\cos\left(q_{2}\left(t\right)\right)}^2+2\,g\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,\cos\left(q_{2}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\right)}{l_{2}\,{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}$\\\\\\
+
+
+$A64 =
+\left(-\frac{l_{1}\,m_{1}\,\cos\left(q_{2}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,2}{l_{2}\,\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}\right)\,\frac{\partial }{\partial t} q_{1}\left(t\right)$\\\\\\
+
+
+$A65 =
+\left(\frac{l_{1}\,m_{1}\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)}{l_{2}\,\left(m_{1}\,{\sin\left(q_{1}\left(t\right)\right)}^2+m_{2}\,{\sin\left(q_{2}\left(t\right)\right)}^2+M\right)}+\frac{l_{1}\,m_{1}\,m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\,2}{l_{2}\,{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\right)\,{\left(\frac{\partial }{\partial t} q_{1}\left(t\right)\right)}^2+\left(-\frac{m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2}{-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}}+\frac{m_{2}\,{\sin\left(q_{2}\left(t\right)\right)}^2}{m_{1}\,{\sin\left(q_{1}\left(t\right)\right)}^2+m_{2}\,{\sin\left(q_{2}\left(t\right)\right)}^2+M}+\frac{{m_{2}}^2\,{\cos\left(q_{2}\left(t\right)\right)}^2\,{\sin\left(q_{2}\left(t\right)\right)}^2\,2}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\right)\,{\left(\frac{\partial }{\partial t} q_{2}\left(t\right)\right)}^2-\frac{2\,M\,g\,\cos\left(q_{2}\left(t\right)\right)+g\,m_{1}\,\cos\left(q_{2}\left(t\right)\right)+2\,g\,m_{2}\,\cos\left(q_{2}\left(t\right)\right)-g\,m_{1}\,\cos\left(2\,q_{1}\left(t\right)-q_{2}\left(t\right)\right)}{l_{2}\,\left(2\,M+m_{1}+m_{2}-m_{1}\,\cos\left(2\,q_{1}\left(t\right)\right)-m_{2}\,\cos\left(2\,q_{2}\left(t\right)\right)\right)}-\frac{F\,\sin\left(q_{2}\left(t\right)\right)}{l_{2}\,\left(m_{1}\,{\sin\left(q_{1}\left(t\right)\right)}^2+m_{2}\,{\sin\left(q_{2}\left(t\right)\right)}^2+M\right)}+\frac{4\,m_{2}\,\sin\left(2\,q_{2}\left(t\right)\right)\,\left(M\,g\,\sin\left(q_{2}\left(t\right)\right)+\frac{g\,m_{1}\,\sin\left(q_{2}\left(t\right)\right)}{2}+g\,m_{2}\,\sin\left(q_{2}\left(t\right)\right)+\frac{g\,m_{1}\,\sin\left(2\,q_{1}\left(t\right)-q_{2}\left(t\right)\right)}{2}\right)}{l_{2}\,{\left(2\,M+m_{1}+m_{2}-m_{1}\,\cos\left(2\,q_{1}\left(t\right)\right)-m_{2}\,\cos\left(2\,q_{2}\left(t\right)\right)\right)}^2}-\frac{F\,m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2\,\sin\left(q_{2}\left(t\right)\right)\,2}{l_{2}\,{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}$\\\\\\
+
+
+$A66 =
+\left(-\frac{m_{2}\,\cos\left(q_{2}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\,2}{-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}}\right)\,\frac{\partial }{\partial t} q_{2}\left(t\right)$\\\\\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+old matlab eqns
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+latex(    collect(    simplify(    A_linear      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    )    )
+latex(    collect(    simplify(    B_linear      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    )    )
+
+
+
+A11 = collect(    simplify(    A_linear(1,1)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A12 = collect(    simplify(    A_linear(1,2)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A13 = collect(    simplify(    A_linear(1,3)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A14 = collect(    simplify(    A_linear(1,4)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A15 = collect(    simplify(    A_linear(1,5)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A16 = collect(    simplify(    A_linear(1,6)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+
+A21 = collect(    simplify(    A_linear(2,1)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A22 = collect(    simplify(    A_linear(2,2)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A23 = collect(    simplify(    A_linear(2,3)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A24 = collect(    simplify(    A_linear(2,4)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A25 = collect(    simplify(    A_linear(2,5)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A26 = collect(    simplify(    A_linear(2,6)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+
+A31 = collect(    simplify(    A_linear(3,1)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A32 = collect(    simplify(    A_linear(3,2)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A33 = collect(    simplify(    A_linear(3,3)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A34 = collect(    simplify(    A_linear(3,4)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A35 = collect(    simplify(    A_linear(3,5)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A36 = collect(    simplify(    A_linear(3,6)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+
+A41 = collect(    simplify(    A_linear(4,1)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A42 = collect(    simplify(    A_linear(4,2)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A43 = collect(    simplify(    A_linear(4,3)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A44 = collect(    simplify(    A_linear(4,4)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A45 = collect(    simplify(    A_linear(4,5)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A46 = collect(    simplify(    A_linear(4,6)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+
+A51 = collect(    simplify(    A_linear(5,1)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A52 = collect(    simplify(    A_linear(5,2)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A53 = collect(    simplify(    A_linear(5,3)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A54 = collect(    simplify(    A_linear(5,4)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A55 = collect(    simplify(    A_linear(5,5)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A56 = collect(    simplify(    A_linear(5,6)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+
+A61 = collect(    simplify(    A_linear(6,1)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A62 = collect(    simplify(    A_linear(6,2)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A63 = collect(    simplify(    A_linear(6,3)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A64 = collect(    simplify(    A_linear(6,4)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A65 = collect(    simplify(    A_linear(6,5)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+A66 = collect(    simplify(    A_linear(6,6)      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    );
+
+
+
+
+
+A11_latex = latex(A11)
+A12_latex = latex(A12)
+A13_latex = latex(A13)
+A14_latex = latex(A14)
+A15_latex = latex(A15)
+A16_latex = latex(A16)
+
+A21_latex = latex(A21)
+A22_latex = latex(A22)
+A23_latex = latex(A23)
+A24_latex = latex(A24)
+A25_latex = latex(A25)
+A26_latex = latex(A26)
+
+A31_latex = latex(A31)
+A32_latex = latex(A32)
+A33_latex = latex(A33)
+A34_latex = latex(A34)
+A35_latex = latex(A35)
+A36_latex = latex(A36)
+
+A41_latex = latex(A41)
+A42_latex = latex(A42)
+A43_latex = latex(A43)
+A44_latex = latex(A44)
+A45_latex = latex(A45)
+A46_latex = latex(A46)
+
+A51_latex = latex(A51)
+A52_latex = latex(A52)
+A53_latex = latex(A53)
+A54_latex = latex(A54)
+A55_latex = latex(A55)
+A56_latex = latex(A56)
+
+A61_latex = latex(A61)
+A62_latex = latex(A62)
+A63_latex = latex(A63)
+A64_latex = latex(A64)
+A65_latex = latex(A65)
+A66_latex = latex(A66)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+symbolic linearized A matrix for directly into latex:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$A11 =
+0$\\\\\\
+
+
+$A12 =
+1$\\\\\\
+
+
+$A13 =
+0$\\\\\\
+
+
+$A14 =
+0$\\\\\\
+
+
+$A15 =
+0$\\\\\\
+
+
+$A16 =
+0$\\\\\\
+
+
+$A21 =
+0$\\\\\\
+
+
+$A22 =
+0$\\\\\\
+
+
+$A23 =
+\left(-\frac{m_{1}\,\left(M\,l_{1}\,\cos\left(q_{1}\left(t\right)\right)-l_{1}\,m_{1}\,\cos\left(q_{1}\left(t\right)\right)+l_{1}\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)+l_{1}\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^3-l_{1}\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,{\cos\left(q_{2}\left(t\right)\right)}^2\right)}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\right)\,{\left(\frac{\partial }{\partial t} q_{1}\left(t\right)\right)}^2+\frac{l_{2}\,m_{1}\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\,2}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\,{\left(\frac{\partial }{\partial t} q_{2}\left(t\right)\right)}^2+\frac{m_{1}\,\left(M\,g+g\,m_{1}+g\,m_{2}-F\,\sin\left(2\,q_{1}\left(t\right)\right)-2\,M\,g\,{\cos\left(q_{1}\left(t\right)\right)}^2-g\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-2\,g\,m_{2}\,{\cos\left(q_{1}\left(t\right)\right)}^2-g\,m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+2\,g\,m_{2}\,{\cos\left(q_{1}\left(t\right)\right)}^2\,{\cos\left(q_{2}\left(t\right)\right)}^2+2\,g\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,\cos\left(q_{2}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\right)}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}$\\\\\\
+
+
+$A24 =
+\left(-\frac{l_{1}\,m_{1}\,\sin\left(q_{1}\left(t\right)\right)\,2}{m_{1}\,{\sin\left(q_{1}\left(t\right)\right)}^2+m_{2}\,{\sin\left(q_{2}\left(t\right)\right)}^2+M}\right)\,\frac{\partial }{\partial t} q_{1}\left(t\right)$\\\\\\
+
+
+$A25 =
+\frac{l_{1}\,m_{1}\,m_{2}\,\cos\left(q_{2}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\,2}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\,{\left(\frac{\partial }{\partial t} q_{1}\left(t\right)\right)}^2+\left(-\frac{m_{2}\,\left(M\,l_{2}\,\cos\left(q_{2}\left(t\right)\right)+l_{2}\,m_{1}\,\cos\left(q_{2}\left(t\right)\right)-l_{2}\,m_{2}\,\cos\left(q_{2}\left(t\right)\right)+l_{2}\,m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^3-l_{2}\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2\,\cos\left(q_{2}\left(t\right)\right)\right)}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\right)\,{\left(\frac{\partial }{\partial t} q_{2}\left(t\right)\right)}^2+\frac{m_{2}\,\left(M\,g+g\,m_{1}+g\,m_{2}-F\,\sin\left(2\,q_{2}\left(t\right)\right)-2\,M\,g\,{\cos\left(q_{2}\left(t\right)\right)}^2-g\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-2\,g\,m_{1}\,{\cos\left(q_{2}\left(t\right)\right)}^2-g\,m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+2\,g\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2\,{\cos\left(q_{2}\left(t\right)\right)}^2+2\,g\,m_{1}\,\cos\left(q_{1}\left(t\right)\right)\,\cos\left(q_{2}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\right)}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}$\\\\\\
+
+
+$A26 =
+\left(-\frac{l_{2}\,m_{2}\,\sin\left(q_{2}\left(t\right)\right)\,2}{m_{1}\,{\sin\left(q_{1}\left(t\right)\right)}^2+m_{2}\,{\sin\left(q_{2}\left(t\right)\right)}^2+M}\right)\,\frac{\partial }{\partial t} q_{2}\left(t\right)$\\\\\\
+
+
+$A31 =
+0$\\\\\\
+
+
+$A32 =
+0$\\\\\\
+
+
+$A33 =
+0$\\\\\\
+
+
+$A34 =
+1$\\\\\\
+
+
+$A35 =
+0$\\\\\\
+
+
+$A36 =
+0$\\\\\\
+
+
+$A41 =
+0$\\\\\\
+
+
+$A42 =
+0$\\\\\\
+
+
+$A43 =
+\left(-\frac{m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2}{-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}}+\frac{m_{1}\,{\sin\left(q_{1}\left(t\right)\right)}^2}{m_{1}\,{\sin\left(q_{1}\left(t\right)\right)}^2+m_{2}\,{\sin\left(q_{2}\left(t\right)\right)}^2+M}+\frac{{m_{1}}^2\,{\cos\left(q_{1}\left(t\right)\right)}^2\,{\sin\left(q_{1}\left(t\right)\right)}^2\,2}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\right)\,{\left(\frac{\partial }{\partial t} q_{1}\left(t\right)\right)}^2+\left(\frac{l_{2}\,m_{2}\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)}{l_{1}\,\left(m_{1}\,{\sin\left(q_{1}\left(t\right)\right)}^2+m_{2}\,{\sin\left(q_{2}\left(t\right)\right)}^2+M\right)}+\frac{l_{2}\,m_{1}\,m_{2}\,{\cos\left(q_{1}\left(t\right)\right)}^2\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\,2}{l_{1}\,{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\right)\,{\left(\frac{\partial }{\partial t} q_{2}\left(t\right)\right)}^2-\frac{2\,M\,g\,\cos\left(q_{1}\left(t\right)\right)-g\,m_{2}\,\cos\left(q_{1}\left(t\right)-2\,q_{2}\left(t\right)\right)+2\,g\,m_{1}\,\cos\left(q_{1}\left(t\right)\right)+g\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)}{l_{1}\,\left(2\,M+m_{1}+m_{2}-m_{1}\,\cos\left(2\,q_{1}\left(t\right)\right)-m_{2}\,\cos\left(2\,q_{2}\left(t\right)\right)\right)}-\frac{F\,\sin\left(q_{1}\left(t\right)\right)}{l_{1}\,\left(m_{1}\,{\sin\left(q_{1}\left(t\right)\right)}^2+m_{2}\,{\sin\left(q_{2}\left(t\right)\right)}^2+M\right)}+\frac{m_{1}\,\sin\left(2\,q_{1}\left(t\right)\right)\,\left(M\,g\,\sin\left(q_{1}\left(t\right)\right)-\frac{g\,m_{2}\,\sin\left(q_{1}\left(t\right)-2\,q_{2}\left(t\right)\right)}{2}+g\,m_{1}\,\sin\left(q_{1}\left(t\right)\right)+\frac{g\,m_{2}\,\sin\left(q_{1}\left(t\right)\right)}{2}\right)\,4}{l_{1}\,{\left(2\,M+m_{1}+m_{2}-m_{1}\,\cos\left(2\,q_{1}\left(t\right)\right)-m_{2}\,\cos\left(2\,q_{2}\left(t\right)\right)\right)}^2}-\frac{F\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2\,\sin\left(q_{1}\left(t\right)\right)\,2}{l_{1}\,{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}$\\\\\\
+
+
+$A44 =
+\left(-\frac{m_{1}\,\cos\left(q_{1}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,2}{-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}}\right)\,\frac{\partial }{\partial t} q_{1}\left(t\right)$\\\\\\
+
+
+$A45 =
+\frac{m_{1}\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,\cos\left(q_{2}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\,2}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\,{\left(\frac{\partial }{\partial t} q_{1}\left(t\right)\right)}^2+\left(-\frac{m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,\left(M\,l_{2}\,\cos\left(q_{2}\left(t\right)\right)+l_{2}\,m_{1}\,\cos\left(q_{2}\left(t\right)\right)-l_{2}\,m_{2}\,\cos\left(q_{2}\left(t\right)\right)+l_{2}\,m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^3-l_{2}\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2\,\cos\left(q_{2}\left(t\right)\right)\right)}{l_{1}\,{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\right)\,{\left(\frac{\partial }{\partial t} q_{2}\left(t\right)\right)}^2+\frac{m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,\left(M\,g+g\,m_{1}+g\,m_{2}-F\,\sin\left(2\,q_{2}\left(t\right)\right)-2\,M\,g\,{\cos\left(q_{2}\left(t\right)\right)}^2-g\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-2\,g\,m_{1}\,{\cos\left(q_{2}\left(t\right)\right)}^2-g\,m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+2\,g\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2\,{\cos\left(q_{2}\left(t\right)\right)}^2+2\,g\,m_{1}\,\cos\left(q_{1}\left(t\right)\right)\,\cos\left(q_{2}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\right)}{l_{1}\,{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}$\\\\\\
+
+
+$A46 =
+\left(-\frac{l_{2}\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\,2}{l_{1}\,\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}\right)\,\frac{\partial }{\partial t} q_{2}\left(t\right)$\\\\\\
+
+
+$A51 =
+0$\\\\\\
+
+
+$A52 =
+0$\\\\\\
+
+
+$A53 =
+0$\\\\\\
+
+
+$A54 =
+0$\\\\\\
+
+
+$A55 =
+0$\\\\\\
+
+
+$A56 =
+1$\\\\\\
+
+
+$A61 =
+0$\\\\\\
+
+
+$A62 =
+0$\\\\\\
+
+
+$A63 =
+\left(-\frac{m_{1}\,\cos\left(q_{2}\left(t\right)\right)\,\left(M\,l_{1}\,\cos\left(q_{1}\left(t\right)\right)-l_{1}\,m_{1}\,\cos\left(q_{1}\left(t\right)\right)+l_{1}\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)+l_{1}\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^3-l_{1}\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,{\cos\left(q_{2}\left(t\right)\right)}^2\right)}{l_{2}\,{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\right)\,{\left(\frac{\partial }{\partial t} q_{1}\left(t\right)\right)}^2+\frac{m_{1}\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,\cos\left(q_{2}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\,2}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\,{\left(\frac{\partial }{\partial t} q_{2}\left(t\right)\right)}^2+\frac{m_{1}\,\cos\left(q_{2}\left(t\right)\right)\,\left(M\,g+g\,m_{1}+g\,m_{2}-F\,\sin\left(2\,q_{1}\left(t\right)\right)-2\,M\,g\,{\cos\left(q_{1}\left(t\right)\right)}^2-g\,m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-2\,g\,m_{2}\,{\cos\left(q_{1}\left(t\right)\right)}^2-g\,m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+2\,g\,m_{2}\,{\cos\left(q_{1}\left(t\right)\right)}^2\,{\cos\left(q_{2}\left(t\right)\right)}^2+2\,g\,m_{2}\,\cos\left(q_{1}\left(t\right)\right)\,\cos\left(q_{2}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\right)}{l_{2}\,{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}$\\\\\\
+
+
+$A64 =
+\left(-\frac{l_{1}\,m_{1}\,\cos\left(q_{2}\left(t\right)\right)\,\sin\left(q_{1}\left(t\right)\right)\,2}{l_{2}\,\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}\right)\,\frac{\partial }{\partial t} q_{1}\left(t\right)$\\\\\\
+
+
+$A65 =
+\left(\frac{l_{1}\,m_{1}\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)}{l_{2}\,\left(m_{1}\,{\sin\left(q_{1}\left(t\right)\right)}^2+m_{2}\,{\sin\left(q_{2}\left(t\right)\right)}^2+M\right)}+\frac{l_{1}\,m_{1}\,m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2\,\sin\left(q_{1}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\,2}{l_{2}\,{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\right)\,{\left(\frac{\partial }{\partial t} q_{1}\left(t\right)\right)}^2+\left(-\frac{m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2}{-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}}+\frac{m_{2}\,{\sin\left(q_{2}\left(t\right)\right)}^2}{m_{1}\,{\sin\left(q_{1}\left(t\right)\right)}^2+m_{2}\,{\sin\left(q_{2}\left(t\right)\right)}^2+M}+\frac{{m_{2}}^2\,{\cos\left(q_{2}\left(t\right)\right)}^2\,{\sin\left(q_{2}\left(t\right)\right)}^2\,2}{{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}\right)\,{\left(\frac{\partial }{\partial t} q_{2}\left(t\right)\right)}^2-\frac{2\,M\,g\,\cos\left(q_{2}\left(t\right)\right)+g\,m_{1}\,\cos\left(q_{2}\left(t\right)\right)+2\,g\,m_{2}\,\cos\left(q_{2}\left(t\right)\right)-g\,m_{1}\,\cos\left(2\,q_{1}\left(t\right)-q_{2}\left(t\right)\right)}{l_{2}\,\left(2\,M+m_{1}+m_{2}-m_{1}\,\cos\left(2\,q_{1}\left(t\right)\right)-m_{2}\,\cos\left(2\,q_{2}\left(t\right)\right)\right)}-\frac{F\,\sin\left(q_{2}\left(t\right)\right)}{l_{2}\,\left(m_{1}\,{\sin\left(q_{1}\left(t\right)\right)}^2+m_{2}\,{\sin\left(q_{2}\left(t\right)\right)}^2+M\right)}+\frac{4\,m_{2}\,\sin\left(2\,q_{2}\left(t\right)\right)\,\left(M\,g\,\sin\left(q_{2}\left(t\right)\right)+\frac{g\,m_{1}\,\sin\left(q_{2}\left(t\right)\right)}{2}+g\,m_{2}\,\sin\left(q_{2}\left(t\right)\right)+\frac{g\,m_{1}\,\sin\left(2\,q_{1}\left(t\right)-q_{2}\left(t\right)\right)}{2}\right)}{l_{2}\,{\left(2\,M+m_{1}+m_{2}-m_{1}\,\cos\left(2\,q_{1}\left(t\right)\right)-m_{2}\,\cos\left(2\,q_{2}\left(t\right)\right)\right)}^2}-\frac{F\,m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2\,\sin\left(q_{2}\left(t\right)\right)\,2}{l_{2}\,{\left(-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}\right)}^2}$\\\\\\
+
+
+$A66 =
+\left(-\frac{m_{2}\,\cos\left(q_{2}\left(t\right)\right)\,\sin\left(q_{2}\left(t\right)\right)\,2}{-m_{1}\,{\cos\left(q_{1}\left(t\right)\right)}^2-m_{2}\,{\cos\left(q_{2}\left(t\right)\right)}^2+M+m_{1}+m_{2}}\right)\,\frac{\partial }{\partial t} q_{2}\left(t\right)$\\\\\\

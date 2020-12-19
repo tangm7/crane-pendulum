@@ -1,0 +1,160 @@
+clc, clear;
+
+% Do not edit this
+syms A(t,alpha,r,d); % Robogrok convention
+
+A = [cos(t) -sin(t)*cos(alpha) sin(t)*sin(alpha) r*cos(t); 
+    sin(t) cos(t)*cos(alpha) -cos(t)*sin(alpha) r*sin(t);0 sin(alpha) cos(alpha) d; 0 0 0 1 ]; % Robogrok, r
+
+%MT
+syms q1(t) q2(t) x(t)
+syms tau1 tau2 F
+syms M m1 m2 l1 l2 g 
+
+% plug in values of 1st row of DH table
+s=struct('t',0,       'alpha',0,        'r',x(t),        'd',0); % Robogrok
+A1 = subs(A,s); % T 0->1 matrix
+
+%2nd row of DH table
+s=struct('t',-pi/2-q1(t),       'alpha',0,        'r',l1,        'd',0); % Robogrok
+A2 = subs(A,s); % T 1->2 matrix
+
+%3rd row of DH table
+s=struct('t',-pi/2-q2(t),       'alpha',0,        'r',l2,        'd',0); % Robogrok
+A3 = subs(A,s); % T 2->3 matrix
+
+
+T0a=simplify(A1)
+Ta1=simplify(A2)
+T01=simplify(T0a*Ta1)
+
+Ta2=simplify(A3)
+T02=simplify(T0a*Ta2)
+
+
+
+z0a = T0a(1:3,3)
+
+o0a = T0a(1:3,4)
+o01 = T01(1:3,4)
+o02 = T02(1:3,4)
+
+Jva = [   [1;0;0]    zeros(3,1)    zeros(3,1)]
+Jwa = [ zeros(3,1)   zeros(3,1)    zeros(3,1)]
+
+Jv1 = [   [1;0;0]     cross(z0a,o01-o0a)    zeros(3,1)   ]
+Jw1 = [ zeros(3,1)        z0a               zeros(3,1)   ]
+
+Jv2 = [   [1;0;0]     zeros(3,1)         cross(z0a,o02-o0a)       ] % fixed
+Jw2 = [   zeros(3,1)        zeros(3,1)            z0a    ] % fixed
+
+
+qdot = [diff(x(t),t); -diff(q1(t),t); -diff(q2(t),t) ]
+
+v0a = Jva * qdot
+v01 = Jv1 * qdot
+v02 = Jv2 * qdot
+
+w0a = Jwa * qdot
+w01 = Jw1 * qdot
+w02 = Jw2 * qdot
+
+R01 = T01(1:3,1:3)
+R02 = T02(1:3,1:3)
+
+I1 = zeros(3,3)
+I2 = zeros(3,3)
+
+
+
+Ta = 1/2 * M * (v0a.') * v0a
+
+T1 = 1/2 * m1 * (v01.') * v01 + 1/2 * (w01.') * R01*I1*(R01.') * w01
+T2 = 1/2 * m2 * (v02.') * v02 + 1/2 * (w02.') * R02*I2*(R02.') * w02
+
+
+T = simplify( Ta + T1 + T2 )
+
+
+
+G = [0;g;0]
+
+Va = 0
+V1 = m1*(G.')*o01 + m1*(G.')*l1*[0;1;0]
+V2 = m2*(G.')*o02 + m2*(G.')*l2*[0;1;0]
+
+V = Va + V1 + V2
+
+
+
+L = T - V
+
+eqn1 = (    collect(    simplify(    diff( diff(L, diff(x(t), t)), t)  - diff(L, x(t))      ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    )    == F       )
+eqn2 = (    collect(    simplify(    diff( diff(L, diff(q1(t), t)), t) - diff(L, q1(t))     ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    )    == 0    )
+eqn3 = (    collect(    simplify(    diff( diff(L, diff(q2(t), t)), t) - diff(L, q2(t))     ), [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    )    == 0    )
+
+display("equations of motion")
+latex(eqn1)
+latex(eqn2)
+latex(eqn3)
+
+
+
+
+
+
+% Lsimple = (    collect(    simplify(    L     ), [1/2*m1 1/2*m2 q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   ]    )    == tau2    )
+% 
+% latex(Lsimple)
+
+
+disp("latex equations of energy expressions:")
+latex(Ta)
+latex(T1)
+latex(T2)
+
+% latex(Va)
+latex(V1)
+latex(V2)
+
+
+
+T2
+T2_ramzi = 1/2*m2*diff(x(t),t)^2 - m2*l2*diff(x(t),t)*diff(q2(t),t)*cos(q2(t)) + 1/2*m2*l2^2 * diff(q2(t),t)^2
+
+L_ramzi_origin = 1/2 * M*diff(x(t),t)^2 + 1/2*m1*diff(x(t),t)^2 + 1/2*m1*l1^2*diff(q1(t),t)^2  - m1*l1*diff(x(t),t) * diff(q1(t),t) * cos(q1(t)) + 1/2 * m2 * diff(x(t),t)^2 +  1/2 * m2 * l2^2 * diff(q2(t),t)^2 - m2 * l2 * diff(x(t),t) * diff(q2(t),t) * cos(q2(t)) - m1*g*l1*( 1-cos(q1(t)) ) - m2*g*l2*( 1- cos(q2(t)))
+L_ramzi_retype = 1/2 * M*diff(x(t),t)^2 + 1/2*m1*diff(x(t),t)^2 + 1/2*m1*l1^2*diff(q1(t),t)^2  - m1*l1*diff(x(t),t) * diff(q1(t),t) * cos(q1(t)) + 1/2 * m2 * diff(x(t),t)^2 +  1/2 * m2 * l2^2 * diff(q2(t),t)^2 - m2 * l2 * diff(x(t),t) * diff(q2(t),t) * cos(q2(t)) - m1*g*l1*( 1-cos(q1(t)) ) - m2*g*l2*( 1- cos(q2(t)))
+
+display("checked ramzi equations were typed correctly")
+L_ramzi_origin-L_ramzi_retype
+
+simplify(T2-T2_ramzi)
+
+
+double(   subs(T1, [q1(t) diff(q1(t), t) diff(q1(t), t, t) q2(t) diff(q2(t), t) diff(q2(t), t, t)    x(t)  diff(x(t),t)   diff(x(t),t,t)   m1  m2   l1  l2], [-1.5708  .1 0   0 0 0   0 0 0   1 1   1 1])   )
+
+
+latex(simplify(L))
+
+display("compare L expressions")
+simplify( L - L_ramzi_origin)
+
+
+
+
+% display("convert equations of motion to thetas")
+% 
+% string_eqn1 = latex(eqn1)
+% string_eqn2 = latex(eqn2)
+% string_eqn3 = latex(eqn3)
+% string_L    = latex(simplify(L))
+% 
+% oldarray = ['q_{1}','q_{2}']
+% newarray = ['\\theta_1','\\theta_2']
+% 
+% newChr = strrep(string_eqn1,oldarray(1),newarray(1))
+
+% replaced_eqn1 = regexprep(string_eqn1,{'q_{1}','q_{2}'},{'\\theta_1','\\theta_2'})
+
+% replaced_eqnasdf = regexprep('qwer{1}',{'qwer{1}','q_{2}'},{'asdfasdf','\\theta_2'})
+
