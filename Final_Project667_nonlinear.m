@@ -61,7 +61,7 @@ x0 = [0;    0;  deg2rad(15);  deg2rad(0);  deg2rad(15);  deg2rad(0)];
 
 u = @(x,t) -K*x
 
-[t,x] = ode45(  @(t,x)crane_diffeq_linear_fxn(x,t,u)    ,   tspan,   x0);
+[t,x] = ode45(  @(t,x)crane_diffeq_nonlinear_fxn(x,t,u)    ,   tspan,   x0);
 
 wr = 0;
 control_input = -K*(x' - wr); % for plotting later
