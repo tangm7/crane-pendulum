@@ -8,7 +8,7 @@ function dx = crane_diffeq_nonlinear_fxn(x,t,u)
 % For the state:             x  = (   q1           q2            q1_dot          q2_dot       )
 % Derivative of state:    x_dot = (   q1_dot      q2_dot     q1_doubledot    q2_doubledot  )
 
-F = u(x)
+F = u(x);
 
 g = 10;
 M = 1000;

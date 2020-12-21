@@ -57,7 +57,7 @@ D = 0; % no feedforward terms
 tspan = 0:.004:20;
 
 %%%%  x    xdot    q1            q1d           q2           q2d
-x0 = [0;    0;  deg2rad(15);  deg2rad(0);  deg2rad(15);  deg2rad(0)];
+x0 = [0;    0;  deg2rad(45);  deg2rad(0);  deg2rad(45);  deg2rad(0)];
 
 u = @(x,t) -K*x
 
