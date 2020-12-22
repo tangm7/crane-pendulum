@@ -9,56 +9,46 @@ l1 = 20;
 l2 = 10;
 
 A = [0 1 0 0 0 0; 0 0 -m1*g/M 0 -m2*g/M 0; 0 0 0 1 0 0; 0 0 -(M+m1)*g/(M*l1) 0 -m2*g/(M*l1) 0; 0 0 0 0 0 1; 0 0 -m1*g/(M*l2) 0 -(M+m2)*g/(M*l2) 0];
-AT = transpose(A);
 B = [0; 1/M; 0; 1/(M*l1); 0; 1/(M*l2)];
-BT = transpose(B);
-R = .0001;
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Find L that makes the system VERY DETECTABLE/OBSERVABLE
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Find K that makes the control law OPTIMAL
+% Q = diag([1000         .1      1000000        .1          1000000           .1]);
+% Q = diag([.001         .001      1000000        .001          1000000           .001]);
+% Q = diag([1000         .001      1000        .001          1000           .001]);
+
+% R = .0001;
+% R = .00000000001;
+
+Q = diag([1000         .0000001      1000000        .0000001          1000000           .0000001]); % constant reference on x
+R = .0000001; % constant reference on x
+
+
+[K, S, E] = lqr(A, B, Q, R);
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define measurement noise characteristics
+Udstddev = .1;
+Vstddev = .1;
+
+Sigma_D = Udstddev*Udstddev*eye(6); % covariance matrix: no correlation so identity matrix, variance equals std dev squared
+Sigma_V = Vstddev*Vstddev*eye(1); % covariance matrix: no correlation so identity matrix, variance equals std dev squared 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Find L that makes the system OPTIMALLY DETECTABLE/OBSERVABLE
 %%% x(t) is output vector
 C_xonly = [1 0 0 0 0 0];
 
-%%% q1(t) q2(t) is output vector
-C_q1_q2 = [0 0   1 0   1 0];
+% p_xonly = [-10 -20 -30 -40 -50 -60]; % place very negative, 10 times further left than the usual poles
+% L_xonly = place(A',C_xonly',p_xonly).';
 
-%%% x(t) theta2(t) is output vector
-C_x_q2 = [1 0   0 0   1 0];
-
-%%% x(t) theta1(t) theta2(t) is output vector
-C_x_q1_q2 = [1 0   1 0   1 0];
-
-syms L1 L2 L3 L4 L5 L6
-Larray = [L1;  L2;  L3;  L4;  L5;  L6]; % L gain matrix
-
-display(" Finding eigenvalues of A - Larray * C ")
-% [Ve, De] = eig(A - Larray*C_xonly) % Note: pick a C matrix to do
-% [L_xonly, S_xonly, E_xonly] = lqr(A-Larray*C_xonly, B, Q, R);
-
-% p_xonly = [-10 -20 -30 -40 -50 -60]; % place very negative, 100 times further left than the usual poles
-% p_all = [-10 -11 -12 -13 -14 -15];
-
-p_all = [-10 -20 -30 -40 -50 -60];
-
-p_xonly = [-10 -20 -30 -40 -50 -60]; % place very negative, 10 times further left than the usual poles
-L_xonly = place(A',C_xonly',p_xonly).';
-
-% p_q1_q2 = [-.1 -.2 -.3 -.4 -.5 -.6]; % not possible because output vectors are not observable!
-% L_q1_q2 = place(A',C_q1_q2',p_all).'
-
-% p_x_q2 = [-7.5 -7.6 -7.7 -7.8 -7.9 -8];
-p_x_q2 = [-5.1 -5.2 -5.3 -5.4 -5.5 -5.6];
-L_x_q2 = place(A',C_x_q2',p_x_q2).';
-
-p_x_q1_q2 = [-5.1 -5.2 -5.3 -5.4 -5.5 -5.6];
-L_x_q1_q2 = place(A',C_x_q1_q2',p_x_q1_q2).';
+% % % Sigma_D = 0.1*eyes(6);
+% % % Sigma_V = 1;
+L_xonly = (lqr(A',C_xonly',Sigma_D,Sigma_V)).'; % place OPTIMALLY
 
 
 
 
 
-
-tspan = 0:.004:20;
+tspan = 0:.004:50;
 
 %%%%  x    xdot    q1            q1d           q2           q2d
 % x0 = [0;    0;  deg2rad(45);  deg2rad(0);  deg2rad(45);  deg2rad(0)]; % Define initial condition for Xe, the errors
@@ -68,17 +58,24 @@ tspan = 0:.004:20;
 % xc0 = [0;    0;  deg2rad(15);  deg2rad(0);  deg2rad(15);  deg2rad(0);        0;    0;  deg2rad(15);  deg2rad(0);  deg2rad(15);  deg2rad(0);  ]; % Define combined initial condition for X, the state and errors
 % xc0 = [0;    0;  deg2rad(15);  deg2rad(0);  deg2rad(15);  deg2rad(0);        0;    0;  0;  deg2rad(0);  0;  deg2rad(0);  ]; % Define combined initial condition for X, the state and errors
 
-xc0 = [0;    0;  0;  0;  0;  0;        0;    0;  0;  0;  0;  0;  ]; % Define combined initial condition for X, the state and errors
-% xc0 = [0;    0;  deg2rad(15);  deg2rad(0);  deg2rad(15);  deg2rad(0);        0;    0;  deg2rad(15);  deg2rad(0);  deg2rad(15);  deg2rad(0);  ]; % Define combined initial condition for X, the state and errors
+% xc0 = [0;    0;  0;  0;  0;  0;        0;    0;  0;  0;  0;  0;  ]; % Define combined initial condition for X, the state and errors
+xc0 = [0;    0;  deg2rad(15);  deg2rad(0);  deg2rad(15);  deg2rad(0);        0;    0;  deg2rad(15);  deg2rad(0);  deg2rad(15);  deg2rad(0);  ]; % Define combined initial condition for X, the state and errors
 
+
+% [t,x] = ode45(  @(t,x)crane_diffeq_Nonlinear_LQG_fxn(x,t,K,L_xonly,Udstddev, Vstddev)    ,   tspan,   xc0);
 % u = @(x,t) -K*x
-u = @(x,t) 1; % as per assignment, force is unit step input. Note control_input (see below) is using ones function right now.
 
-[t,x] = ode45(  @(t,x)crane_diffeq_Nonlinear_Luenberger_fxn(x,t,u)    ,   tspan,   xc0);
+% wr = 0;
+wr = [1;  0;           deg2rad(0); 0;           deg2rad(0);  0]; % constant reference, note 6 states not 12
+u = @(xhat,t) -K*(xhat - wr); % control law
+
+% [t,x] = ode45(  @(t,x)crane_diffeq_Nonlinear_LQG_ConstantReference_fxn(x,t,u,K,L_xonly,Udstddev, Vstddev)    ,   tspan,   xc0); % CONSTANT REFERENCE
+[t,x] = ode45(  @(t,x)crane_diffeq_Nonlinear_LQG_ConstantReference_ConstantForce_fxn(x,t,u,K,L_xonly,Udstddev, Vstddev)    ,   tspan,   xc0); %%%%%% CONSTANT REFERENCE + REJECT CONSTANT FORCE DISTURBANCE
 
 size_x = size(x)
 number_timesteps = size_x(1)
-control_input = ones( number_timesteps ); % for plotting later
+
+control_input = -K*(x(:,7:12)' - wr); % for plotting later, control input was based on estimated states
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

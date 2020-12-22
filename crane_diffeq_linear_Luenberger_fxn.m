@@ -23,20 +23,28 @@ B = [0; 1/M; 0; 1/(M*l1); 0; 1/(M*l2)];
 % C_xonly = [1 0 0 0 0 0];
 
 %%% x(t) theta2(t) is output vector
-% C_x_q2 = [1 0   0 0   1 0];
+C_x_q2 = [1 0   0 0   1 0];
 
 %%% x(t) theta1(t) theta2(t) is output vector
-C_x_q1_q2 = [1 0   1 0   1 0];
+% C_x_q1_q2 = [1 0   1 0   1 0];
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%% Pick one respective observer of the three below to use
+Udstddev = .1; % no noise for part F, but let's put something here so Ricatti eqn can be solved
+Vstddev = .1; % no noise for part F, but let's put something here so Ricatti eqn can be solved
+Sigma_D = Udstddev*Udstddev*eye(6); % covariance matrix: no correlation so identity matrix, variance equals std dev squared
+Sigma_V = Vstddev*Vstddev*eye(1); % covariance matrix: no correlation so identity matrix, variance equals std dev squared 
+
 % p_xonly = [-10 -20 -30 -40 -50 -60];
 % L_xonly = place(A',C_xonly',p_xonly).';
+% L_xonly = (lqr(A',C_xonly',Sigma_D,Sigma_V)).'; % place OPTIMALLY
 
 % p_x_q2 = [-5.1 -5.2 -5.3 -5.4 -5.5 -5.6];
 % L_x_q2 = place(A',C_x_q2',p_x_q2).';
+L_x_q2 = (lqr(A',C_x_q2',Sigma_D,Sigma_V)).'; % place OPTIMALLY
 
-p_x_q1_q2 = [-5.1 -5.2 -5.3 -5.4 -5.5 -5.6];
-L_x_q1_q2 = place(A',C_x_q1_q2',p_x_q1_q2).';
+% p_x_q1_q2 = [-5.1 -5.2 -5.3 -5.4 -5.5 -5.6];
+% L_x_q1_q2 = place(A',C_x_q1_q2',p_x_q1_q2).';
+% L_x_q1_q2 = (lqr(A',C_x_q1_q2',Sigma_D,Sigma_V)).'; % place OPTIMALLY
 
 
 
@@ -46,20 +54,20 @@ L_x_q1_q2 = place(A',C_x_q1_q2',p_x_q1_q2).';
 %             L_xonly*C_xonly    A - L_xonly*C_xonly;];
                 
 
-% Ac_x_q2 = [      A                zeros(6,6);
-%             L_x_q2*C_x_q2    A - L_x_q2*C_x_q2;];
+Ac_x_q2 = [      A                zeros(6,6);
+            L_x_q2*C_x_q2    A - L_x_q2*C_x_q2;];
 
 
-Ac_x_q1_q2 = [      A                zeros(6,6);
-            L_x_q1_q2*C_x_q1_q2    A - L_x_q1_q2*C_x_q1_q2;];
+% Ac_x_q1_q2 = [      A                zeros(6,6);
+%             L_x_q1_q2*C_x_q1_q2    A - L_x_q1_q2*C_x_q1_q2;];
         
 %%%%%%%%%%%%%%%%%%%%%%%% B is the same for all
 Bc = [B; B]; % combined B
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Pick one respective (twelve state) state equation
 % Xdot = Ac_xonly * X + Bc*F;
-% Xdot = Ac_x_q2 * X + Bc*F;
-Xdot = Ac_x_q1_q2 * X + Bc*F;
+Xdot = Ac_x_q2 * X + Bc*F;
+% Xdot = Ac_x_q1_q2 * X + Bc*F;
 
 
 
