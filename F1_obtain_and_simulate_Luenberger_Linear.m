@@ -169,7 +169,7 @@ ylabel('(deg/s)')
 subplot(7,1,7) % Plot Cart Position
 plot(t, (control_input), 'LineWidth', 3)
 grid on
-legend('u: control_input')
+legend('u: control input')
 xlabel('Time (s)') 
 ylabel('(N)')
 

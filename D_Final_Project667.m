@@ -12,7 +12,9 @@ A = [0 1 0 0 0 0; 0 0 -m1*g/M 0 -m2*g/M 0; 0 0 0 1 0 0; 0 0 -(M+m1)*g/(M*l1) 0 -
 AT = transpose(A);
 B = [0; 1/M; 0; 1/(M*l1); 0; 1/(M*l2)];
 BT = transpose(B);
-R = .0001;
+% R = .0001;
+
+
 
 P_1 = [p11 p12 p13 p14 p15 p16; p21 p22 p23 p24 p25 p26; p31 p32 p33 p34 p35 p36; p41 p42 p43 p44 p45 p46; p51 p52 p53 p54 p55 p56; p61 p62 p63 p64 p65 p66];
 
@@ -21,6 +23,9 @@ Qall = 10000;
 % Q = diag([100 Qall Qall Qall Qall Qall]);
 
 %%%%      x       xdot      q1         q1d           q2              q2d
+
+% R = .0001;
+R = .01;
 Q = diag([.1         .1      1000000        .1          1000000           .1]);
 
 % Q = diag([100 100 100 100 100 100]);
@@ -54,14 +59,16 @@ eig(P_lyap);
 C = [1 1 1 1 1 1]; % perfect sensors, linear state feedback
 D = 0; % no feedforward terms
 
-tspan = 0:.004:20;
+tspan = 0:.004:30;
 
 %%%%  x    xdot    q1            q1d           q2           q2d
-x0 = [0;    0;  deg2rad(45);  deg2rad(0);  deg2rad(45);  deg2rad(0)];
+% x0 = [0;    0;  deg2rad(45);  deg2rad(0);  deg2rad(45);  deg2rad(0)];
+x0 = [0;    0;  deg2rad(15);  deg2rad(0);  deg2rad(15);  deg2rad(0)];
+
 
 u = @(x,t) -K*x
 
-[t,x] = ode45(  @(t,x)crane_diffeq_nonlinear_fxn(x,t,u)    ,   tspan,   x0);
+[t,x] = ode45(  @(t,x)crane_diffeq_linear_fxn(x,t,u)    ,   tspan,   x0);
 
 wr = 0;
 control_input = -K*(x' - wr); % for plotting later

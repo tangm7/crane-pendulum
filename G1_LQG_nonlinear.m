@@ -13,17 +13,24 @@ B = [0; 1/M; 0; 1/(M*l1); 0; 1/(M*l2)];
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Find K that makes the control law OPTIMAL
-% Q = diag([1000         .1      1000000        .1          1000000           .1]);
 % Q = diag([.001         .001      1000000        .001          1000000           .001]);
 % Q = diag([1000         .001      1000        .001          1000           .001]);
 
-% R = .0001;
 % R = .00000000001;
 
-Q = diag([1000         .0000001      1000000        .0000001          1000000           .0000001]); % constant reference on x
-R = .0000001; % constant reference on x
+% Q = diag([1000         .0000001      1000000        .0000001          1000000           .0000001]); % constant reference on x
+% R = .0000001; % constant reference on x
+
+Q = diag([.1         .1      1000000        .1          1000000           .1]); % good performance, high control cost
+R = .0001; % good performance, high control cost
+
+% Q = diag([.1         .1      1000000        .1          1000000           .1]); % medium performance, medium control cost
+% R = .01; % medium performance, medium control cost
 
 
+
+% Q = diag([1000000         .1      1000000        .1          1000000           .1]); % track constant reference
+% R = .1; % track constant reference
 [K, S, E] = lqr(A, B, Q, R);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define measurement noise characteristics
@@ -48,7 +55,7 @@ L_xonly = (lqr(A',C_xonly',Sigma_D,Sigma_V)).'; % place OPTIMALLY
 
 
 
-tspan = 0:.004:50;
+tspan = 0:.004:10;
 
 %%%%  x    xdot    q1            q1d           q2           q2d
 % x0 = [0;    0;  deg2rad(45);  deg2rad(0);  deg2rad(45);  deg2rad(0)]; % Define initial condition for Xe, the errors
@@ -62,15 +69,15 @@ tspan = 0:.004:50;
 xc0 = [0;    0;  deg2rad(15);  deg2rad(0);  deg2rad(15);  deg2rad(0);        0;    0;  deg2rad(15);  deg2rad(0);  deg2rad(15);  deg2rad(0);  ]; % Define combined initial condition for X, the state and errors
 
 
-% [t,x] = ode45(  @(t,x)crane_diffeq_Nonlinear_LQG_fxn(x,t,K,L_xonly,Udstddev, Vstddev)    ,   tspan,   xc0);
+[t,x] = ode45(  @(t,x)crane_diffeq_Nonlinear_LQG_fxn(x,t,K,L_xonly,Udstddev, Vstddev)    ,   tspan,   xc0);
 % u = @(x,t) -K*x
 
-% wr = 0;
-wr = [1;  0;           deg2rad(0); 0;           deg2rad(0);  0]; % constant reference, note 6 states not 12
+wr = 0;
+% wr = [1;  0;           deg2rad(0); 0;           deg2rad(0);  0]; % constant reference, note 6 states not 12
 u = @(xhat,t) -K*(xhat - wr); % control law
 
 % [t,x] = ode45(  @(t,x)crane_diffeq_Nonlinear_LQG_ConstantReference_fxn(x,t,u,K,L_xonly,Udstddev, Vstddev)    ,   tspan,   xc0); % CONSTANT REFERENCE
-[t,x] = ode45(  @(t,x)crane_diffeq_Nonlinear_LQG_ConstantReference_ConstantForce_fxn(x,t,u,K,L_xonly,Udstddev, Vstddev)    ,   tspan,   xc0); %%%%%% CONSTANT REFERENCE + REJECT CONSTANT FORCE DISTURBANCE
+% [t,x] = ode45(  @(t,x)crane_diffeq_Nonlinear_LQG_ConstantReference_ConstantForce_fxn(x,t,u,K,L_xonly,Udstddev, Vstddev)    ,   tspan,   xc0); %%%%%% CONSTANT REFERENCE + REJECT CONSTANT FORCE DISTURBANCE
 
 size_x = size(x)
 number_timesteps = size_x(1)
@@ -167,7 +174,7 @@ ylabel('(deg/s)')
 subplot(7,1,7) % Plot Cart Position
 plot(t, (control_input), 'LineWidth', 3)
 grid on
-legend('u: control_input')
+legend('u: control input')
 xlabel('Time (s)') 
 ylabel('(N)')
 

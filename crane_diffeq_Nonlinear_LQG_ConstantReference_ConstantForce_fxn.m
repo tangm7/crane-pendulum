@@ -87,7 +87,7 @@ Ec = [E_nonlinear; zeros(size(E_nonlinear))];
 %%%%%%%%%%%%%%%%%%%%%%% Define Noise
 Ud = Udstddev*randn(6,1); % process noise has standard deviation of .1 (equates to about 5 degrees for angles, .1 meters = 4 in, or .1 m/s)
 
-V = Vstddev*randn(1,1); % measurement noise has standard deviation of .1 (equates to about 5 degrees for angles, .1 meters = 4 in, or .1 m/s) % CORRECTED: V is 1x1
+V = Vstddev*randn(1,1); % measurement noise has standard deviation of .1 (equates to about 5 degrees for angles, .1 meters = 4 in, or .1 m/s), note V is 1x1
 
 %%%%%%%%%%%%%%%%%%%%%%%%% Pick one respective (twelve state) state equation
 % Xdot = Ac * X + Bu*F + Bc*Ud + Dc*V + Ec;

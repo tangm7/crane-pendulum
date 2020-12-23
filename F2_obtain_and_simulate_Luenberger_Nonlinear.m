@@ -68,8 +68,8 @@ tspan = 0:.004:20;
 % xc0 = [0;    0;  deg2rad(15);  deg2rad(0);  deg2rad(15);  deg2rad(0);        0;    0;  deg2rad(15);  deg2rad(0);  deg2rad(15);  deg2rad(0);  ]; % Define combined initial condition for X, the state and errors
 % xc0 = [0;    0;  deg2rad(15);  deg2rad(0);  deg2rad(15);  deg2rad(0);        0;    0;  0;  deg2rad(0);  0;  deg2rad(0);  ]; % Define combined initial condition for X, the state and errors
 
-xc0 = [0;    0;  0;  0;  0;  0;        0;    0;  0;  0;  0;  0;  ]; % Define combined initial condition for X, the state and errors
-% xc0 = [0;    0;  deg2rad(15);  deg2rad(0);  deg2rad(15);  deg2rad(0);        0;    0;  deg2rad(15);  deg2rad(0);  deg2rad(15);  deg2rad(0);  ]; % Define combined initial condition for X, the state and errors
+% xc0 = [0;    0;  0;  0;  0;  0;        0;    0;  0;  0;  0;  0;  ]; % Define combined initial condition for X, the state and errors
+xc0 = [0;    0;  deg2rad(45);  deg2rad(0);  deg2rad(45);  deg2rad(0);        0;    0;  deg2rad(45);  deg2rad(0);  deg2rad(45);  deg2rad(0);  ]; % Define combined initial condition for X, the state and errors
 
 % u = @(x,t) -K*x
 u = @(x,t) 1; % as per assignment, force is unit step input. Note control_input (see below) is using ones function right now.

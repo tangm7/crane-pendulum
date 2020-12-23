@@ -66,19 +66,15 @@ C_xonly = [1 0 0 0 0 0];
 % p_xonly = [-.95 -.952 -.4 -.43 -.15 -.152];
 % L_xonly = place(A',C_xonly',p_xonly).';
 
-Udstddev = .1; % no noise for part F, but let's put something here so Ricatti eqn can be solved
-Vstddev = .1; % no noise for part F, but let's put something here so Ricatti eqn can be solved
+Udstddev = .1; % no noise for part F, but let's assume small amount of noise so Ricatti eqn can be solved, and no-noise system should still perform well
+Vstddev = .1; % no noise for part F, but let's assume small amount of noise so Ricatti eqn can be solved, and no-noise system should still perform well
 Sigma_D = Udstddev*Udstddev*eye(6); % covariance matrix: no correlation so identity matrix, variance equals std dev squared
 Sigma_V = Vstddev*Vstddev*eye(1); % covariance matrix: no correlation so identity matrix, variance equals std dev squared 
+
 L_xonly = (lqr(A',C_xonly',Sigma_D,Sigma_V)).'; % place OPTIMALLY
 
-
-% p_x_q2 = [-5.1 -5.2 -5.3 -5.4 -5.5 -5.6];
-% L_x_q2 = place(A',C_x_q2',p_x_q2).';
 % L_x_q2 = (lqr(A',C_x_q2',Sigma_D,Sigma_V)).'; % place OPTIMALLY
 
-% p_x_q1_q2 = [-5.1 -5.2 -5.3 -5.4 -5.5 -5.6];
-% L_x_q1_q2 = place(A',C_x_q1_q2',p_x_q1_q2).';
 % L_x_q1_q2 = (lqr(A',C_x_q1_q2',Sigma_D,Sigma_V)).'; % place OPTIMALLY
 
 
